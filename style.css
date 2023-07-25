@@ -1,0 +1,116 @@
+body {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(228, 110, 110);
+  padding-top: 0px;
+  margin-top: 0px;
+}
+
+.ui-container {
+  position: relative;
+  border: solid;
+  max-width: 1000px;
+  width: 90%; /* Use a percentage for width to make it responsive */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(211, 241, 101);
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between; /* Distribute the elements evenly along the header */
+  border-bottom: solid;
+  background-color: rgb(15, 102, 12);
+  align-items: center;
+}
+
+.title-text {
+  font-size: 150%;
+  font-weight: bold;
+  color: white;
+}
+.level-text {
+  font-size: 125%;
+  margin-left: 5%;
+  color: white;
+}
+
+.lives-text {
+  margin-right: 5%;
+  color: white;
+  font-size: 125%;
+}
+
+.game-container {
+  width: 80%; /* Use percentage for the game container as well */
+  height: 800px; /* Set a padding-bottom with the same percentage as width to create a square */
+  background-color: rgb(
+    255,
+    255,
+    255
+  ); /* Add some color so you can see the container */
+  margin-bottom: 3%;
+  margin-top: 3%;
+  border: solid;
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(16, 1fr);
+  grid-gap: 5px;
+  opacity: 1;
+}
+
+.start-game-area {
+  visibility: visible;
+  position: absolute; /* Use absolute positioning for overlay */
+  top: 50%; /* Position the element 50% from the top */
+  left: 50%; /* Position the element 50% from the left */
+  transform: translate(-50%, -50%); /* Center the element precisely */
+  text-align: center;
+}
+/* You can add more CSS styles as needed for your game */
+.tile {
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+.E {
+  background-color: rgb(136, 214, 245);
+}
+
+.S {
+  background-color: rgb(255, 172, 17);
+}
+
+.F {
+  background-color: red;
+}
+
+.start-game-button {
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  background-color: rgb(89, 154, 240);
+  width: 140px;
+  height: 60px;
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 15px;
+  transition: opacity 0.15s;
+}
+
+.name-input-field {
+  padding: 8px;
+  border-radius: 10px;
+  border: none;
+  background-color: lightgray;
+}
+
+.start-game-button:hover {
+  opacity: 0.8;
+}
+
+.start-game-button:active {
+  opacity: 0.6;
+}
